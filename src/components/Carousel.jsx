@@ -44,24 +44,21 @@ export default function Carousel() {
       />
     </div>
 
-      {/* Flechas */}
-      <button
-        onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur
-                   rounded-full w-10 h-10 flex items-center justify-center
-                   text-[#0f2a3a] hover:bg-white transition"
-      >
-        ‹
-      </button>
-
-      <button
-        onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur
-                   rounded-full w-10 h-10 flex items-center justify-center
-                   text-[#0f2a3a] hover:bg-white transition"
-      >
-        ›
-      </button>
+      {/* Dots Indicator */}
+      <div className="flex justify-center gap-2 mt-4">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`h-2 rounded-full transition ${
+              index === current
+                ? "bg-[#f45b69] w-6"
+                : "bg-[#0f2a3a]/30 w-2 hover:bg-[#0f2a3a]/50"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </section>
   )
 }

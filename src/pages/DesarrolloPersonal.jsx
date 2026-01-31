@@ -95,7 +95,7 @@ export default function Page1() {
         Talleres de Desarrollo Personal
       </h1>
 
-      <section className="space-y-8 mb-16">
+      <section className="space-y-8 mb-8">
         {talleres.map((taller, index) => {
           const isOpen = open === index
 

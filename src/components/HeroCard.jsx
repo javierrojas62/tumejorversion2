@@ -18,9 +18,9 @@ export default function HeroCard() {
         </h1>
 
         {/* Subtítulo */}
-        <p className="text-white/80 text-lg">
+        {/* <p className="text-white/80 text-lg">
           Información clara para mejorar cada día
-        </p>
+        </p> */}
       </div>
     </section>
   )

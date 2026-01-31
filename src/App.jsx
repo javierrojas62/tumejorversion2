@@ -1,4 +1,5 @@
-import { HashRouter, Routes, Route } from "react-router-dom"
+import { useEffect } from "react"
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import Page1 from "./pages/UnoaUno"
@@ -6,11 +7,22 @@ import Page2 from "./pages/DesarrolloPersonal"
 import Page3 from "./pages/Editorial"
 import Footer from "./components/Footer"
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
+
 export default function App() {
   return (
     <HashRouter>
       <div className="min-h-screen bg-[#9fd8d6]">
         <Header />
+        <ScrollToTop />
         <main >
           <Routes>
             <Route path="/" element={<Home />} />

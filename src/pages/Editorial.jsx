@@ -38,7 +38,7 @@ export default function Page1() {
         Nuestra Editorial
       </h1>
 
-      <section className="space-y-8 mb-16">
+      <section className="space-y-8 mb-8">
         {publicaciones.map((pub, index) => {
           const isOpen = open === index
 
