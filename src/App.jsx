@@ -19,18 +19,18 @@ function ScrollToTop() {
 export default function App() {
   return (
     <HashRouter>
-      <div className="min-h-screen bg-[#9fd8d6]">
+      <div className="min-h-screen bg-[#9fd8d6] flex flex-col">
         <Header />
         <ScrollToTop />
-        <main >
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/page2" element={<Page2 />} />
             <Route path="/page3" element={<Page3 />} />
           </Routes>
         </main>
+        <Footer />
       </div>
-      <Footer />
     </HashRouter>
 
   )
