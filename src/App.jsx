@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./pages/Home"
-import Page1 from "./pages/UnoaUno"
 import Page2 from "./pages/DesarrolloPersonal"
 import Page3 from "./pages/Editorial"
 import Footer from "./components/Footer"
@@ -26,7 +25,6 @@ export default function App() {
         <main >
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/page1" element={<Page1 />} />
             <Route path="/page2" element={<Page2 />} />
             <Route path="/page3" element={<Page3 />} />
           </Routes>

@@ -139,7 +139,7 @@ export default function ExpandableCards() {
             {/* Texto desplegable */}
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out
-                ${isOpen ? "max-h-[1700px] mb-6" : "max-h-0"}`}
+                ${isOpen ? "max-h-[800px] md:max-h-[1700px] mb-6" : "max-h-0"}`}
             >
               <p className="text-[#0f2a3a]/80 leading-relaxed text-justify whitespace-pre-wrap">
                 {item.content}

@@ -2,7 +2,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#9fd8d6]/80 backdrop-blur-md border-t border-[#49b6b6]/40">
+    <footer className="mt-6 bg-[#9fd8d6]/80 backdrop-blur-md border-t border-[#49b6b6]/40">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
 
         {/* Redes */}
