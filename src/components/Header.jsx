@@ -25,7 +25,6 @@ export default function Header() {
           className="flex items-center gap-2 text-[#0f2a3a] font-bold text-xl"
           onClick={() => setOpen(false)}
         >
-          Tu Mejor Versión
         </NavLink>
 
         {/* Links desktop */}
