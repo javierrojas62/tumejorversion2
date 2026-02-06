@@ -2,7 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -27,8 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # Prefer a personal access token stored in GH secret GH_PAGES_PAT.
-          # If you prefer to allow the built-in GITHUB_TOKEN, set workflow permissions to Write in repo Settings → Actions → General.
-          personal_token: ${{ secrets.GH_PAGES_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
