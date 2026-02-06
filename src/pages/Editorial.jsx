@@ -8,21 +8,21 @@ import { useState } from "react"
 const publicaciones = [
   {
     img: img1,
-    // title: "Publicación 1",
+    title: "Lecturas inspiradoras",
     content: `
 📖 En construcción.
     `,
   },
   {
     img: img2,
-    // title: "Publicación 2",
+    title: "Taller",
     content: `
 📚 Talleres.
     `,
   },
   {
     img: img3,
-    // title: "Publicación 3",
+    title: "Publica tu libro",
     content: `
 ✍️ En construcción.
     `,

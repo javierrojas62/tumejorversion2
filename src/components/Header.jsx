@@ -32,9 +32,9 @@ export default function Header() {
           <NavLink to="/" className={linkClass}>Inicio</NavLink>
           <NavLink to="/#coaching-uno-a-uno" className={linkClass}>Coaching
             Uno a Uno</NavLink>
-          <NavLink to="/page2" className={linkClass}>Talleres de
+          <NavLink to="/desarrollo-personal" className={linkClass}>Talleres de
             Desarrollo Personal</NavLink>
-          <NavLink to="/page3" className={linkClass}>Nuestra
+          <NavLink to="/editorial" className={linkClass}>Nuestra
             Editorial</NavLink>
         </div>
 
@@ -51,17 +51,26 @@ export default function Header() {
       {/* Menú mobile */}
       {open && (
         <div className="md:hidden bg-[#9fd8d6]/95 backdrop-blur-md px-6 py-4 space-y-4 border-t border-[#49b6b6]/40">
-          <NavLink to="/" className={linkClass} onClick={() => setOpen(false)}>
+          <a
+            href="/"
+            className={linkClass({ isActive: false })}
+            onClick={() => setOpen(false)}
+          >
             Inicio
-          </NavLink>
-          <NavLink to="/#coaching-uno-a-uno" className={linkClass} onClick={() => setOpen(false)}>
-            Coaching
-            Uno a Uno
-          </NavLink>
-          <NavLink to="/page2" className={linkClass} onClick={() => setOpen(false)}>
+          </a>
+
+          <a
+            href="/#coaching-uno-a-uno"
+            className="block text-[#0f2a3a] hover:text-[#f45b69] transition"
+            onClick={() => setOpen(false)}
+          >
+            Coaching Uno a Uno
+          </a>
+
+          <NavLink to="/desarrollo-personal" className={linkClass} onClick={() => setOpen(false)}>
             Desarrollo Personal
           </NavLink>
-          <NavLink to="/page3" className={linkClass} onClick={() => setOpen(false)}>
+          <NavLink to="/editorial" className={linkClass} onClick={() => setOpen(false)}>
             Nuestra
             Editorial
           </NavLink>

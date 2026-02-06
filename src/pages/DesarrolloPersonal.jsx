@@ -5,6 +5,7 @@ import { useState } from "react"
 
 const talleres = [
   {
+    title: "Volver a creer en mi",
     img: img1,
     buttonText: "Inscribirse",
     isAvailable: true,
@@ -75,11 +76,13 @@ Reservá tu lugar y empezá este proceso de reconexión personal.
     `,
   },
   {
+    title: "Habitar mis emociones",
     img: img2,
     buttonText: "Cupos llenos",
     isAvailable: false,
   },
   {
+    title: "Manejo del estrés",
     img: img3,
     buttonText: "Cupos llenos",
     isAvailable: false,

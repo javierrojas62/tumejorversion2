@@ -7,11 +7,10 @@ import img3 from "../assets/info/img3.svg"
 
 const items = [
   {
+    title: "Coaching uno a uno ✨",
     img: img1,
-    // title: "Desarrollo personal",
     content:
       `
-✨ Coaching uno a uno
 Un espacio personalizado para tu transformación personal
 
 Las sesiones individuales de coaching son un proceso de acompañamiento profesional y confidencial, diseñado para que puedas comprenderte mejor, gestionar tus emociones y generar cambios reales y sostenibles en tu vida personal y profesional.
@@ -70,14 +69,14 @@ El objetivo no es “arreglarte”, sino acompañarte a descubrir nuevas formas 
       `,
   },
   {
+    title: "Desarrollo Personal",
     img: img2,
-    // title: "Bienestar emocional",
     // content:
     //   "Texto largo, contenedor cómodo, buena lectura. El diseño acompaña el contenido y no lo interrumpe.",
   },
   {
+    title: "Editorial",
     img: img3,
-    // title: "Hábitos conscientes",
     // content:
     //   "Más texto largo. Este formato invita a bajar el ritmo, leer y reflexionar.",
   },
