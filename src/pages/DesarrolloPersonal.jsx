@@ -148,7 +148,7 @@ export default function Page1() {
               {/* Botón Inscribirse/Cupos llenos */}
               {taller.isAvailable ? (
                 <a
-                  href="https://wa.me/5492645065072?text=Hola, quiero inscribirme al taller"
+                  href="https://chat.whatsapp.com/CKGbBg6pltQ0mROmzq2yLP?mode=gi_t"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
