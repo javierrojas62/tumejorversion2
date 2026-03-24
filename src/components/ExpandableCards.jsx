@@ -88,7 +88,7 @@ export default function ExpandableCards() {
   }, [location])
 
   return (
-    <section className="mt-24 space-y-16">
+    <section className="mt-12 md:mt-24 space-y-8 md:space-y-16">
       {items.map((item, index) => {
         const isOpen = open === index
 
@@ -96,18 +96,18 @@ export default function ExpandableCards() {
           <div
             key={index}
             id={index === 0 ? "coaching-uno-a-uno" : undefined}
-            className="bg-white/70 backdrop-blur-md rounded-3xl border border-[#49b6b6]/30 p-8"
+            className="bg-white/70 backdrop-blur-md rounded-2xl md:rounded-3xl border border-[#49b6b6]/30 p-4 md:p-8"
           >
 
             {/* IMÁGENES */}
             {index === 1 ? (
-  <div className="flex flex-col gap-6 mb-6">
+  <div className="flex flex-col gap-4 md:gap-6 mb-4 md:mb-6">
     {/* Imagen principal */}
     <Link to="/page2">
       <img
         src={img2}
         alt="Desarrollo Personal"
-        className="w-full h-auto mx-auto rounded-3xl"
+        className="w-full max-w-sm md:max-w-none h-auto mx-auto rounded-2xl md:rounded-3xl"
       />
     </Link>
 
@@ -118,7 +118,7 @@ export default function ExpandableCards() {
         alt="Imagen complementaria"
         className="
           w-4/5 md:w-3/4
-          max-h-[500px]
+          max-h-[300px] md:max-h-[500px]
           object-contain
           mx-auto
           rounded-2xl
@@ -132,19 +132,19 @@ export default function ExpandableCards() {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-auto mx-auto mb-6 rounded-3xl"
+                  className="w-full max-w-sm md:max-w-none h-auto mx-auto mb-4 md:mb-6 rounded-2xl md:rounded-3xl"
                 />
               </Link>
             ) : (
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-auto mx-auto mb-6 rounded-3xl"
+                className="w-full max-w-sm md:max-w-none h-auto mx-auto mb-4 md:mb-6 rounded-2xl md:rounded-3xl"
               />
             )}
 
             {/* TÍTULO */}
-            <h3 className="text-center text-2xl font-semibold text-[#0f2a3a] mb-4">
+            <h3 className="text-center text-xl md:text-2xl font-semibold text-[#0f2a3a] mb-3 md:mb-4">
               {item.title}
             </h3>
 
@@ -154,21 +154,21 @@ export default function ExpandableCards() {
                 className={`transition-all duration-500 ease-in-out
                   ${
                     isOpen
-                      ? "max-h-[80vh] md:max-h-[1700px] mb-6 overflow-auto"
+                      ? "max-h-[70vh] md:max-h-[1700px] mb-4 md:mb-6 overflow-auto"
                       : "max-h-0 overflow-hidden"
                   }`}
               >
-                <p className="text-[#0f2a3a]/80 leading-relaxed text-justify whitespace-pre-wrap">
+                <p className="text-[#0f2a3a]/80 leading-relaxed text-left md:text-justify whitespace-pre-wrap text-sm md:text-base">
                   {item.content}
                 </p>
 
                 {(index === 0 || index === 1) && isOpen && (
-                  <div className="flex justify-center mt-4">
+                  <div className="flex justify-center mt-3 md:mt-4">
                     <a
                       href="https://wa.me/5492645065072?text=Hola, quiero agendar una sesión"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-1 rounded-full text-sm bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
+                      className="px-3 py-1 md:px-4 md:py-1 rounded-full text-xs md:text-sm bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
                     >
                       📱 Agendar por WhatsApp
                     </a>
@@ -182,14 +182,14 @@ export default function ExpandableCards() {
               {index === 1 ? (
                 <Link
                   to="/desarrollo-personal"
-                  className="inline-block px-6 py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition"
+                  className="inline-block px-4 py-2 md:px-6 md:py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition text-sm md:text-base"
                 >
                   Saber más
                 </Link>
               ) : (
                 <button
                   onClick={() => setOpen(isOpen ? null : index)}
-                  className="inline-block px-6 py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition"
+                  className="inline-block px-4 py-2 md:px-6 md:py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition text-sm md:text-base"
                 >
                   {isOpen ? "Ver menos" : "Saber más"}
                 </button>
