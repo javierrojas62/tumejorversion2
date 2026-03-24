@@ -68,61 +68,6 @@ El objetivo no es “arreglarte”, sino acompañarte a descubrir nuevas formas 
   {
     title: "Desarrollo Personal",
     img: img2,
-content: `Un espacio para volver a vos, bajar el estrés y recuperar tu equilibrio
-
-Si vivís cansada, exigida, estresada y con la sensación de que siempre estás para todos menos para vos, este programa es para vos.
-Volver a vos es un programa grupal de manejo del estrés para mujeres trabajadoras y emprendedoras que se sienten exigidas y agotadas emocionalmente, y desean recuperar su bienestar y claridad interior.
-
-A lo largo de un proceso consciente y acompañado, vas a aprender a escucharte, regular tus emociones y fortalecer tu autoestima, incorporando hábitos de autocuidado sostenibles en el tiempo.
-🧭 ¿En qué consiste este programa?
-
-Es un recorrido práctico y humano donde trabajamos sobre:
-
-✔ identificar qué situaciones y pensamientos te generan estrés
-✔ aprender a regular tus emociones sin exigirte de más
-✔ fortalecer tu autoestima y el vínculo con vos misma
-✔ poner límites claros sin culpa
-✔ incorporar hábitos de autocuidado reales y sostenibles
-
-El objetivo no es hacer más, sino vivir mejor, con mayor calma, presencia y coherencia interna.
-🧠 Herramientas que utilizamos
-
-🔹 Psicología positiva aplicada al bienestar
-🔹 Coaching ontológico para ampliar conciencia y acción
-🔹 Programación Neurolingüística (PNL) para transformar patrones y creencias limitantes
-
-    No es terapia.
-    Es un espacio de aprendizaje, autocuidado y reconexión personal.
-    🌱 ¿Para qué puede servirte Volver a vos?
-
-    Este programa puede ayudarte a:
-
-    ✨ reducir el estrés y la autoexigencia
-    ✨ mejorar tu bienestar emocional
-    ✨ recuperar energía y motivación
-    ✨ fortalecer tu autoestima
-    ✨ aprender a ponerte en primer lugar sin culpa
-    ✨ volver a escucharte y elegirte con mayor claridad
-    🤝 Un proceso grupal, humano y acompañado
-
-    No estás sola.
-    Compartís este proceso con otras mujeres que atraviesan desafíos similares, en un espacio cuidado, respetuoso y de sostén mutuo.
-
-        Vos traés tu historia.
-        El espacio acompaña.
-        El cambio comienza cuando te elegís.
-        💫 ¿Te animás a volver a vos?
-
-        Consultá por la próxima edición del programa
-        Un espacio para bajar el ruido, reconectar con vos y recuperar tu equilibrio.
-
-        🔹 Modalidad grupal
-        🔹 Acompañamiento profesional
-        🔹 Espacio seguro y confidencial
-
-            A veces, volver a vos es el acto más valiente que podés hacer.
-
-        👉 Pedí más información por WhatsApp`,
   },
   {
     title: "Editorial",
@@ -203,40 +148,53 @@ export default function ExpandableCards() {
               {item.title}
             </h3>
 
-            {/* TEXTO DESPLEGABLE */}
-            <div
-              className={`transition-all duration-500 ease-in-out
-                ${
-                  isOpen
-                    ? "max-h-[80vh] md:max-h-[1700px] mb-6 overflow-auto"
-                    : "max-h-0 overflow-hidden"
-                }`}
-            >
-              <p className="text-[#0f2a3a]/80 leading-relaxed text-justify whitespace-pre-wrap">
-                {item.content}
-              </p>
+            {/* TEXTO DESPLEGABLE - No mostrar para index 1 (Desarrollo Personal) */}
+            {index !== 1 && (
+              <div
+                className={`transition-all duration-500 ease-in-out
+                  ${
+                    isOpen
+                      ? "max-h-[80vh] md:max-h-[1700px] mb-6 overflow-auto"
+                      : "max-h-0 overflow-hidden"
+                  }`}
+              >
+                <p className="text-[#0f2a3a]/80 leading-relaxed text-justify whitespace-pre-wrap">
+                  {item.content}
+                </p>
 
-              {(index === 0 || index === 1) && isOpen && (
-                <div className="flex justify-center mt-4">
-                  <a
-                    href="https://wa.me/5492645065072?text=Hola, quiero agendar una sesión"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-1 rounded-full text-sm bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
-                  >
-                    📱 Agendar por WhatsApp
-                  </a>
-                </div>
+                {(index === 0 || index === 1) && isOpen && (
+                  <div className="flex justify-center mt-4">
+                    <a
+                      href="https://wa.me/5492645065072?text=Hola, quiero agendar una sesión"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-1 rounded-full text-sm bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
+                    >
+                      📱 Agendar por WhatsApp
+                    </a>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* BOTÓN - Para index 1 es un Link, para otros es toggle */}
+            <div className="text-center">
+              {index === 1 ? (
+                <Link
+                  to="/desarrollo-personal"
+                  className="inline-block px-6 py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition"
+                >
+                  Saber más
+                </Link>
+              ) : (
+                <button
+                  onClick={() => setOpen(isOpen ? null : index)}
+                  className="inline-block px-6 py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition"
+                >
+                  {isOpen ? "Ver menos" : "Saber más"}
+                </button>
               )}
             </div>
-
-            {/* BOTÓN */}
-            <button
-              onClick={() => setOpen(isOpen ? null : index)}
-              className="mx-auto block px-6 py-2 rounded-full bg-[#f45b69] text-white font-medium hover:bg-[#e14e5b] transition"
-            >
-              {isOpen ? "Ver menos" : "Saber más"}
-            </button>
           </div>
         )
       })}
