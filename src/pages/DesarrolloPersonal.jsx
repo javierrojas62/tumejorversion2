@@ -30,7 +30,7 @@ export default function DesarrolloPersonal() {
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full text-base bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
           >
-            📱 Agendar por WhatsApp
+            📱 Unite a nuestro grupo Gratis
           </a>
         </div>
       </div>
