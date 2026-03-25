@@ -25,7 +25,7 @@ export default function DesarrolloPersonal() {
         {/* Botón de Agendar por WhatsApp */}
         <div className="flex justify-center">
           <a
-            href="https://wa.me/5492645065072?text=Hola, quiero agendar una sesión"
+            href="https://chat.whatsapp.com/CKGbBg6pltQ0mROmzq2yLP?mode=gi_t"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 rounded-full text-base bg-[#25D366] text-white font-medium hover:bg-[#1fa857] transition"
